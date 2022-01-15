@@ -4,6 +4,7 @@ import com.example.Shop.entities.Person;
 import java.text.SimpleDateFormat;
 
 public class Shop {
+    
     public static double getPriceCoefficient(Person person) {
         if (new SimpleDateFormat("E").toString().equalsIgnoreCase("Воскресенье") && person.isRegular())
             return 0.8;
@@ -12,6 +13,7 @@ public class Shop {
         else if (new SimpleDateFormat("E").toString().equalsIgnoreCase("Воскресенье") && !person.isRegular())
             return 0.9;
         return 1;
+        
     }
 
     public static double getPriceCoefficient() {
